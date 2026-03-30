@@ -1,75 +1,63 @@
-# Nuxt Minimal Starter
+# CITY CENTER — Мини-отель в сердце Мурманска
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+![Nuxt](https://img.shields.io/badge/Nuxt-4-00DC82?style=flat-square&logo=nuxt.js&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)
 
-## Setup
+Профессиональный веб-сайт для мини-отеля **CITY CENTER**, расположенного в историческом центре Мурманска. Проект представляет собой современный, отзывчивый Landing Page, созданный с использованием передовых технологий фронтенд-разработки.
 
-Make sure to install dependencies:
+## 🏨 О проекте
 
-```bash
-# npm
-npm install
+Сайт разработан для предоставления гостям полной информации об отеле, доступных номерах и услугах. Основной акцент сделан на удобстве пользователя, эстетике и быстрой загрузке.
 
-# pnpm
-pnpm install
+### Основные разделы:
+- **Главный экран**: Форма быстрого бронирования и актуальные предложения.
+- **О нас**: Преимущества расположения и уровень сервиса.
+- **Номера**: Подробный каталог с описанием удобств и цен.
+- **Галерея**: Интерактивный просмотр интерьеров отеля.
+- **Отзывы**: Интеграция с виджетом Яндекс Карт.
+- **Контакты**: Карта и интерактивные способы связи.
 
-# yarn
-yarn install
+## 🚀 Технологический стек
 
-# bun
-bun install
-```
+- **Framework**: [Nuxt 4](https://nuxt.com/) (в режиме SSR для SEO)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: `@nuxt/icon` (Material Symbols Light)
+- **Content**: JSON-ориентированная структура данных для легкого редактирования (номера, галерея, преимущества)
+- **UI/UX**: Адаптивный дизайн, Glassmorphism эффекты, интерактивная галерея (Lightbox)
 
-## Development Server
+## 🛠 Установка и запуск
 
-Start the development server on `http://localhost:3000`:
+### Требования
+- Node.js (версия 18.x или выше)
+- npm / pnpm / yarn
 
-```bash
-# npm
-npm run dev
+### Шаги по развертыванию
+1. Клонируйте репозиторий:
+   ```bash
+   git clone https://github.com/jackspurs03/minihotel_citycenter.git
+   ```
+2. Установите зависимости:
+   ```bash
+   npm install
+   ```
+3. Запустите сервер для разработки:
+   ```bash
+   npm run dev
+   ```
 
-# pnpm
-pnpm dev
+## 🏗 Структура данных
 
-# yarn
-yarn dev
+Для удобства обновления информации проект использует JSON-файлы в директории `app/data/`:
+- `rooms.json` — управление списком номеров и ценами.
+- `gallery.json` — управление фотографиями в галерее.
+- `advantages.json` — список преимуществ отеля.
 
-# bun
-bun run dev
-```
+## 📄 Контакты
 
-## Production
+- **Адрес**: г. Мурманск, ул. Володарского, д. 2А
+- **Телефон**: +7 (902) 130-14-44
+- **Email**: citycentre-hotel@mail.ru
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+---
+*Разработано с заботой о гостях Мурманска.*
