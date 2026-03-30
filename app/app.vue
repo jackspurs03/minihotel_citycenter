@@ -8,7 +8,16 @@ const lightbox = reactive({
   index: 0
 })
 
-const allPhotos = computed(() => gallery.flatMap(g => g.photos.map(p => ({ ...p, category: g.category }))))
+const { app: { baseURL } } = useRuntimeConfig()
+const fixPath = (path: string) => {
+  if (path && path.startsWith('/') && !path.startsWith('http') && !path.startsWith(baseURL)) {
+    return (baseURL + path.slice(1)).replace(/\/+/g, '/')
+  }
+  return path
+}
+
+const allPhotos = computed(() => gallery.flatMap(g => g.photos.map(p => ({ ...p, category: g.category, image: fixPath(p.image) }))))
+const processedRooms = computed(() => rooms.map(r => ({ ...r, image: fixPath(r.image) })))
 
 function openLightbox(photo: any) {
   const index = allPhotos.value.findIndex(p => p.image === photo.image)
@@ -154,7 +163,7 @@ onMounted(() => {
                   <div class="space-y-1.5">
                     <label class="block font-label text-[10px] uppercase text-slate-500 font-bold tracking-wider">Тип номера</label>
                     <select class="w-full bg-white border border-slate-200 rounded-[4px] px-4 py-3 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all appearance-none">
-                      <option v-for="room in rooms" :key="room.id" :value="room.id">{{ room.title }}</option>
+                      <option v-for="room in processedRooms" :key="room.id" :value="room.id">{{ room.title }}</option>
                     </select>
                   </div>
                 </div>
@@ -229,7 +238,7 @@ onMounted(() => {
               </div>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div v-for="room in rooms" :key="room.id" class="bg-surface-container-lowest rounded-xl overflow-hidden group flex flex-col">
+              <div v-for="room in processedRooms" :key="room.id" class="bg-surface-container-lowest rounded-xl overflow-hidden group flex flex-col">
                 <div class="relative h-80 md:h-[480px] overflow-hidden">
                   <img :alt="room.imageAlt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" :src="room.image"/>
                   <div class="absolute top-6 left-6 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded text-[11px] font-bold uppercase tracking-[0.2em] text-slate-900">
@@ -282,7 +291,7 @@ onMounted(() => {
               <h3 class="font-headline text-2xl font-bold text-on-surface">{{ group.category }}</h3>
               <div class="grid grid-cols-2 gap-4 auto-rows-[200px] md:auto-rows-[250px]">
                 <div v-for="(photo, photoIndex) in group.photos" :key="photoIndex" :class="['relative group overflow-hidden rounded-lg bg-surface-container cursor-zoom-in', photo.class]" @click="openLightbox(photo)">
-                  <img :src="photo.image" :alt="photo.title || group.category" class="w-full h-full object-cover transition-transform duration-700" loading="lazy" />
+                  <img :src="fixPath(photo.image)" :alt="photo.title || group.category" class="w-full h-full object-cover transition-transform duration-700" loading="lazy" />
                   <div v-if="photo.title" class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 flex items-end h-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
                     <span class="text-white font-headline font-bold text-xs uppercase tracking-wider">{{ photo.title }}</span>
                   </div>

@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  app: {
+    baseURL: '/minihotel_citycenter/',
+    buildAssetsDir: 'assets'
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/icon',
