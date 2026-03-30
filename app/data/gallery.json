@@ -1,0 +1,97 @@
+[
+  {
+    "category": "Зона ресепшн",
+    "photos": [
+      {
+        "title": "",
+        "image": "/reception_1.webp",
+        "class": "col-span-2 row-span-1"
+      },
+      {
+        "title": "",
+        "image": "/reception_2.webp",
+        "class": "col-span-1 row-span-1"
+      },
+      {
+        "title": "",
+        "image": "/reception_3.webp",
+        "class": "col-span-1 row-span-1"
+      }
+    ]
+  },
+  {
+    "category": "Кухня",
+    "photos": [
+      {
+        "title": "",
+        "image": "/kitchen_1.webp",
+        "class": "col-span-1 row-span-1"
+      },
+      {
+        "title": "",
+        "image": "/kitchen_2.webp",
+        "class": "col-span-1 row-span-1"
+      },
+      {
+        "title": "",
+        "image": "/kitchen_3.webp",
+        "class": "col-span-2 row-span-1"
+      }
+    ]
+  },
+  {
+    "category": "Ванная комната",
+    "photos": [
+      {
+        "title": "",
+        "image": "/bathroom_1.webp",
+        "class": "col-span-1 row-span-1"
+      },
+      {
+        "title": "",
+        "image": "/bathroom_2.webp",
+        "class": "col-span-1 row-span-1"
+      }
+    ]
+  },
+  {
+    "category": "Холл",
+    "photos": [
+      {
+        "title": "",
+        "image": "/hall_1.webp",
+        "class": "col-span-2 row-span-1"
+      }
+    ]
+  },
+  {
+    "category": "Улучшенный одноместный номер",
+    "photos": [
+      {
+        "title": "",
+        "image": "/improved-single.webp",
+        "class": "col-span-2 row-span-1"
+      }
+    ]
+  },
+  {
+    "category": "Номер Стандарт",
+    "photos": [
+      {
+        "title": "",
+        "image": "/twin-standard.webp",
+        "class": "col-span-2 row-span-1"
+      }
+    ]
+  },
+  {
+    "category": "Комната №1",
+    "photos": [
+      {
+        "title": "",
+        "image": "/room_1.webp",
+        "class": "col-span-2 row-span-1"
+      }
+    ]
+  }
+]

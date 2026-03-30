@@ -1,0 +1,20 @@
+[
+  {
+    "id": "improved-single",
+    "badge": "Стандарт",
+    "title": "Улучшенный одноместный номер",
+    "price": "3 950 ₽",
+    "description": "1 односпальная кровать, прикроватная тумбочка, стол, стул, шкаф, телевизор, светонепроницаемые шторы, собственная ванная комната с душем, туалетом, раковиной, феном и бесплатными косметическими принадлежностями. Общая кухня, завтрак включен.",
+    "image": "/improved-single.webp",
+    "imageAlt": "Modern double hotel room with crisp white bedding, wooden accents, and a large window overlooking the city center"
+  },
+  {
+    "id": "twin-standard",
+    "badge": "Улучшенный",
+    "title": "Двухместный стандарт с 2 кроватями",
+    "price": "4 200 ₽",
+    "description": "2 односпальные кровати, прикроватная тумбочка, стол, стул, шкаф, телевизор, светонепроницаемые шторы, собственная ванная комната с душем, туалетом, раковиной, феном и бесплатными косметическими принадлежностями. Общая кухня, завтрак включен.",
+    "image": "/twin-standard.webp",
+    "imageAlt": "Spacious twin hotel room with two separate beds, elegant gray headboards, and soft decorative pillows"
+  }
+]
