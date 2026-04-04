@@ -20,6 +20,7 @@ const processedRooms = computed(() => rooms.map(r => ({ ...r, image: fixPath(r.i
   <Html class="scroll-smooth" lang="ru">
     <Head>
       <Title>CITY CENTER - Мини-отель в центре Мурманска</Title>
+      <Meta name="robots" content="noindex, nofollow" />
       <Link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
     </Head>
     <Body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
