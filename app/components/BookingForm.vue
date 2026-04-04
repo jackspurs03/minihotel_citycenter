@@ -6,13 +6,8 @@ defineProps<{
 
 <template>
   <div class="glass-card p-10 rounded-[4px] border border-white/30 max-w-lg ml-auto w-full">
-    <!-- Prices Updated Badge (from requirements) -->
-    <div class="mb-6 flex items-center gap-3 bg-primary/10 border border-primary/20 p-3 rounded-lg">
-      <Icon name="material-symbols-light:info-outline" class="text-primary text-xl" />
-      <span class="text-[10px] font-bold uppercase tracking-wider text-primary">Цены на 2026 г. обновлены</span>
-    </div>
-
     <div class="space-y-6">
+
       <div class="space-y-4">
         <!-- Name Field -->
         <div class="space-y-1.5">
